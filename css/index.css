@@ -8,7 +8,7 @@ body{
 }
 
 header{
-	background-color: lightpink;
+	background-color: #6d1d4b;
 	height: 5em;
 	color: #FFF;
 	margin-bottom: 1em;
@@ -67,7 +67,7 @@ td, th {
 
 th{
 	font-weight: bold;
-	background-color: #EEE;
+	background-color: #967085;
 }
 
 label{
@@ -105,12 +105,11 @@ button{
 	margin: 0;
 	margin-top: -3px;
 	color: #fff;
-	background-color:#0c8cd3;
-	border-color: #04324c;
+	background-color: #6d1d4b;
+	border-color: #b93480;
 	width: 20%;
-    display: block;
     clear: both;
-    margin: 10px 0px;
+    margin: 10px 0px 0px 15px;
 
 }
 
@@ -138,5 +137,5 @@ button[disabled=disabled], button:disabled {
 }
 
 .paciente-invalido{
-	background-color: lightcoral;
+	background-color:mistyrose;
 }
