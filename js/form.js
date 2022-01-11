@@ -28,18 +28,13 @@ function obtemPacienteDoFormulario(form){
 
 function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
+    pacienteTr.classList.add("paciente") // adiciona a classe paciente p/ ser igual a TR criada inicialmente no html
 
-    var nomeTd = document.createElement("td");
-    var pesoTd = document.createElement("td");
-    var alturaTd = document.createElement("td");
-    var gorduraTd = document.createElement("td");
-    var imcTd = document.createElement("td");
-
-    nomeTd.textContent = paciente.nome;
-    pesoTd.textContent = paciente.peso;
-    alturaTd.textContent = paciente.altura;
-    gorduraTd.textContent = paciente.gordura;
-    imcTd.textContent = paciente.imc;
+    var nomeTd = montaTd(paciente.nome, "info-nome");
+    var pesoTd = montaTd(paciente.peso, "info-peso");
+    var alturaTd = montaTd(paciente.altura, "info-altura");
+    var gorduraTd = montaTd(paciente.gordura, "info-gordura");
+    var imcTd = montaTd(paciente.imc, "info-imc");
 
     // add paciente na tabela
     pacienteTr.appendChild(nomeTd);
@@ -50,5 +45,13 @@ function montaTr(paciente){
 
     return pacienteTr;
 
+}
+
+function montaTd(dado, classe){
+    var td = document.createElement("td");
+    td.classList.add(classe)
+    td.textContent = dado;
+
+    return td;
 
 }
